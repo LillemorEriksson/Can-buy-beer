@@ -6,21 +6,29 @@ namespace Consoleapp1
     {
         static void Main(string[] args)
         {
-            /*<- start crimment block
+            /*<- start comment block
              * hello fello
              * ends comment block /* */
 
             string name = "Lillemor "; //this is how i can write comments in C#
             Console.WriteLine(name + ":hello world!");
+            string ageStr = Console.ReadLine();
 
-            String ageStr = Console.ReadLine();
+            int age = 0;
+            while (age == 0)
+            {
+                age = 0;
+                try
+                {
+                    Console.Write("Ange din ålder: ");
+                   age = Convert.ToInt32(Console.ReadLine());
+                }
+                catch { }
+            }
 
-            Console.WriteLine(ageStr);
-
-            int age = Convert.ToInt32(ageStr);
             age++; //age=age + 1; är samma som age++;
 
-            Console.WriteLine("you will be" + age + "next year!");
+            Console.WriteLine("you will be " + age + " next year!");
             if (age > 20)
             {
                 Console.WriteLine("you can buy beer next year!");
@@ -38,6 +46,7 @@ namespace Consoleapp1
             {
                 //int selection = Convert.ToInt32(Console.ReadLine());
 
+                Console.WriteLine("Enter number:");
                 int selection = getNumberFromUser();
 
                 switch (selection)
